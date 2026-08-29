@@ -1,0 +1,165 @@
+restaurant_id,name,area,cuisine,price_band,rating,review_count,source,source_table,address,restaurant_url,has_menu_data
+1,Burger O'Clock,DHA,Food,,4.7,2377,lahore_fast_food_dha,restaurants_clean,,,True
+2,Flavor Cartel,DHA,Food,,5.0,32,lahore_fast_food_dha,restaurants_clean,,,False
+3,Johnny & Jugnu - Phase 4,DHA,Food,,4.4,11161,lahore_fast_food_dha,restaurants_clean,,,True
+4,Brim Burgers ( DHA Phase 6 Raya),DHA,Food,,4.7,2222,lahore_fast_food_dha,restaurants_clean,,,False
+5,FOUR Restaurant,DHA,Food,,4.6,5258,lahore_fast_food_dha,restaurants_clean,,,False
+6,Cheezious - DHA Phase 4,DHA,Food,,4.6,5268,lahore_fast_food_dha,restaurants_clean,,,False
+7,Brim Burgers ( DHA Phase 4 FF),DHA,Food,,4.4,576,lahore_fast_food_dha,restaurants_clean,,,False
+8,Grub Shack,DHA,Food,,4.5,97,lahore_fast_food_dha,restaurants_clean,,,False
+9,SMASH - DHA Phase 6,DHA,Food,,4.0,475,lahore_fast_food_dha,restaurants_clean,,,False
+10,SMASH - DHA Phase 2,DHA,Food,,4.2,1020,lahore_fast_food_dha,restaurants_clean,,,True
+11,SALT Z PHASE3 DHA LHR,DHA,Cafe,,4.1,317,lahore_fast_food_dha,restaurants_clean,,,False
+12,Uncle Dave Hot Chicken,DHA,Food,,4.4,190,lahore_fast_food_dha,restaurants_clean,,,False
+13,Magnet Burgers,DHA,Food,,5.0,54,lahore_fast_food_dha,restaurants_clean,,,False
+14,MUSTRD,DHA,Food,,4.0,228,lahore_fast_food_dha,restaurants_clean,,,False
+15,HungerFuel,DHA,Food,,4.7,506,lahore_fast_food_dha,restaurants_clean,,,False
+16,BRGR - Fairways DHA,DHA,Food,,4.6,522,lahore_fast_food_dha,restaurants_clean,,,False
+17,Chicago street,DHA,Food,,4.1,524,lahore_fast_food_dha,restaurants_clean,,,False
+18,BonBird Dolmen Mall Lahore,DHA,Food,,3.9,591,lahore_fast_food_dha,restaurants_clean,,,False
+19,Lahore Broast - DHA,DHA,Broast,,4.1,3000,foodpanda_lahore,restaurants_clean,,,False
+20,Butt Sweets & Bakers - DHA,DHA,Cakes & Bakery,,3.9,100,foodpanda_lahore,restaurants_clean,,,False
+21,Jalal Sons - G Block DHA,DHA,Fast Food,,4.1,100,foodpanda_lahore,restaurants_clean,,,False
+22,Bait-Ul-Shawarma - DHA H Block,DHA,Middle Eastern,,4.1,4000,foodpanda_lahore,restaurants_clean,,,False
+23,The Halal Boys- DHA,DHA,Fast Food,,4.2,100,foodpanda_lahore,restaurants_clean,,,False
+24,Simply Sufi XPRS - DHA Phase 1,DHA,Fast Food,,4.2,500,foodpanda_lahore,restaurants_clean,,,False
+25,Yousaf Falooda - Dha,DHA,Ice Cream,,4.2,500,foodpanda_lahore,restaurants_clean,,,False
+26,Red Apple - DHA Phase 1,DHA,Fast Food,,4.3,100,foodpanda_lahore,restaurants_clean,,,False
+27,Pizza Time - Dha,DHA,Pizza,,4.1,1000,foodpanda_lahore,restaurants_clean,,,False
+28,Balochi Dera - DHA,DHA,Pakistani,,4.1,100,foodpanda_lahore,restaurants_clean,,,False
+29,Bar.B.Q. HUB - H Block DHA,DHA,Pakistani,,4.3,500,foodpanda_lahore,restaurants_clean,,,False
+30,Dumplings by Sai’s Pantry (DHA),DHA,Chinese,,3.8,100,foodpanda_lahore,restaurants_clean,,,False
+31,BNB Club-DHA,DHA,Fast Food,,4.3,34,foodpanda_lahore,restaurants_clean,,,False
+32,Tandoor Restaurant- DHA,DHA,Pakistani,,4.3,1000,foodpanda_lahore,restaurants_clean,,,False
+33,Butt Karahi - DHA,DHA,Pakistani,,4.0,100,foodpanda_lahore,restaurants_clean,,,False
+34,La Downtown - DHA,DHA,Pasta,,4.0,4000,foodpanda_lahore,restaurants_clean,,,False
+35,"Health""n""Goodness - Dha",DHA,Healthy Food,,4.5,65,foodpanda_lahore,restaurants_clean,,,False
+36,Biryani Express - DHA,DHA,Pasta,,4.1,5000,foodpanda_lahore,restaurants_clean,,,False
+37,Kunafa Inn - DHA Phase 1,DHA,Desserts,,3.9,100,foodpanda_lahore,restaurants_clean,,,False
+38,Al Beirut Lebanese Cuisine - DHA,DHA,21205 min,,4.5,100,foodpanda_lahore,restaurants_clean,,,False
+39,Baskin Robbins - DHA,DHA,Ice Cream,,4.2,1000,foodpanda_lahore,restaurants_clean,,,False
+40,Bundu Khan Restaurant - DHA Z Block,DHA,Pakistani,,4.3,2000,foodpanda_lahore,restaurants_clean,,,False
+41,Pickadeli - DHA,DHA,Pasta,,3.9,2000,foodpanda_lahore,restaurants_clean,,,False
+42,Mandarin Kitchen - DHA,DHA,Chinese,,4.1,100,foodpanda_lahore,restaurants_clean,,,False
+43,Gloria Jean's Coffees- DHA Z Block,DHA,Beverages,,3.7,100,foodpanda_lahore,restaurants_clean,,,False
+44,Shahida's Special - DHA,DHA,Pakistani,,3.9,100,foodpanda_lahore,restaurants_clean,,,False
+45,Cosa Nostra - DHA Y Block,DHA,Continental,,4.2,500,foodpanda_lahore,restaurants_clean,,,False
+46,Third Culture Coffee - Dha,DHA,Cakes & Bakery,,4.5,100,foodpanda_lahore,restaurants_clean,,,False
+47,MHK Fast Food - DHA,DHA,Pasta,,4.5,100,foodpanda_lahore,restaurants_clean,,,False
+48,Twins Pizza - DHA,DHA,Pasta,,4.0,1000,foodpanda_lahore,restaurants_clean,,,False
+49,A Taste Place - DHA,DHA,Fast Food,,3.3,40,foodpanda_lahore,restaurants_clean,,,False
+50,Wasabi - DHA,DHA,Japanese,,4.0,1000,foodpanda_lahore,restaurants_clean,,,False
+51,Captain Cook's - Q-Block DHA,DHA,Fast Food,,3.9,1000,foodpanda_lahore,restaurants_clean,,,False
+52,Burning Brownie (DHA),DHA,Desserts,,2.6,6,foodpanda_lahore,restaurants_clean,,,False
+53,Krem - DHA,DHA,Pasta,,3.6,96,foodpanda_lahore,restaurants_clean,,,False
+54,Mastani - DHA,DHA,Pasta,,3.5,100,foodpanda_lahore,restaurants_clean,,,False
+55,Gloria Jeans Coffees DHA XX Block,DHA,Pasta,,4.0,1000,foodpanda_lahore,restaurants_clean,,,False
+56,Sally's- DHA,DHA,Fast Food,,4.5,500,foodpanda_lahore,restaurants_clean,,,False
+57,Novu Pan Asian - DHA,DHA,Chinese,,4.0,2000,foodpanda_lahore,restaurants_clean,,,False
+58,Amavi - DHA,DHA,Pasta,,4.4,100,foodpanda_lahore,restaurants_clean,,,False
+59,Go Flour - DHA Phase 4,DHA,Continental,,4.4,100,foodpanda_lahore,restaurants_clean,,,False
+60,The Burger Cart - DHA,DHA,Burgers,,4.3,500,foodpanda_lahore,restaurants_clean,,,False
+61,Bagh - DHA,DHA,Pakistani,,3.4,63,foodpanda_lahore,restaurants_clean,,,False
+62,Home Grown - DHA,DHA,Burgers,,4.1,100,foodpanda_lahore,restaurants_clean,,,False
+63,Munch -Dha,DHA,Fast Food,,4.2,500,foodpanda_lahore,restaurants_clean,,,False
+64,Muhammad Din Dogar Restaurant - DD DHA,DHA,Pakistani,,3.5,85,foodpanda_lahore,restaurants_clean,,,False
+65,ProPasta - DHA,DHA,Fast Food,,3.3,100,foodpanda_lahore,restaurants_clean,,,False
+66,NY 212 - DHA,DHA,Pizza,,4.2,3000,foodpanda_lahore,restaurants_clean,,,False
+67,Defence Bar.B.Q,DHA,Pakistani,,4.1,500,foodpanda_lahore,restaurants_clean,,,False
+68,Defence Dhaba Bar.B.Q & Pakwan Center,DHA,Pakistani,,4.0,1000,foodpanda_lahore,restaurants_clean,,,False
+69,THE HOTSPOT CAFE - DD BLOCK DHA,DHA,Pasta,,4.5,1000,foodpanda_lahore,restaurants_clean,,,False
+70,Philly's - DHA,DHA,Burgers,,4.2,500,foodpanda_lahore,restaurants_clean,,,False
+71,It's Cheesy - DHA Phase 8 (Ex. Park View),DHA,Fast Food,,4.2,500,foodpanda_lahore,restaurants_clean,,,False
+72,14Th Street Pizza Co. - Dha Phase 5,DHA,Pizza,,4.1,1000,foodpanda_lahore,restaurants_clean,,,False
+73,Cinnabon - DHA Phase 5,DHA,Pasta,,4.6,1000,foodpanda_lahore,restaurants_clean,,,False
+74,Pie in the Sky - Dha phase 5,DHA,Cakes & Bakery,,4.3,1000,foodpanda_lahore,restaurants_clean,,,False
+75,SALT - My Dainty Kitchen -DHA Phase 8,DHA,Pakistani,,4.0,100,foodpanda_lahore,restaurants_clean,,,False
+76,Haagen Dazs - DHA,DHA,Desserts,,4.2,100,foodpanda_lahore,restaurants_clean,,,False
+77,Arabian Shawarma Abu Alman - DHA 5 M Block near Askari 11,DHA,Shawarma,,4.3,500,foodpanda_lahore,restaurants_clean,,,False
+78,Kulchay RESTAUARNT -DHA,DHA,Pakistani,,4.0,100,foodpanda_lahore,restaurants_clean,,,False
+79,Go Sushi - DHA Phase 6,DHA,Continental,,3.9,78,foodpanda_lahore,restaurants_clean,,,True
+80,Movenpick Ice Cream - Dha,DHA,Ice Cream,,4.6,17,foodpanda_lahore,restaurants_clean,,,False
+81,Layers Bakeshop - DHA Phase 6,DHA,Cakes & Bakery,,4.5,500,foodpanda_lahore,restaurants_clean,,,False
+82,Ice Bear – DHA,DHA,Desserts,,4.7,100,foodpanda_lahore,restaurants_clean,,,False
+83,Lahore Chatkhara - Dha phase 6,DHA,Pakistani,,3.7,100,foodpanda_lahore,restaurants_clean,,,False
+84,Kickstart Cafe - DHA Phase 6,DHA,Fast Food,,4.1,1000,foodpanda_lahore,restaurants_clean,,,False
+85,Karachi Kanteen - Defence Raya,DHA,Fast Food,,3.4,100,foodpanda_lahore,restaurants_clean,,,False
+86,Saku Hana-DHA Raya,DHA,Chinese,,4.5,10,foodpanda_lahore,restaurants_clean,,,False
+87,My Karak Chai-DHA Raya,DHA,Pakistani,,4.4,9,foodpanda_lahore,restaurants_clean,,,False
+88,Costa Coffee - Defence Raya,DHA,Continental,,4.1,100,foodpanda_lahore,restaurants_clean,,,False
+89,Gauchos DHA Raya,DHA,Fast Food,,2.6,3,foodpanda_lahore,restaurants_clean,,,False
+90,Baranh - DHA Raya,DHA,Pakistani,,4.3,100,foodpanda_lahore,restaurants_clean,,,False
+91,Caprinos - DHA Raya,DHA,Fast Food,,4.1,100,foodpanda_lahore,restaurants_clean,,,False
+92,The Canvas - DHA Raya,DHA,Pakistani,,4.9,3,foodpanda_lahore,restaurants_clean,,,False
+93,Pink Pistachio - DHA Raya,DHA,Fast Food,,3.8,81,foodpanda_lahore,restaurants_clean,,,False
+94,Cafe Beirut - DHA Raya,DHA,Continental,,3.3,84,foodpanda_lahore,restaurants_clean,,,False
+95,The Tipsy Co - DHA Raya,DHA,Continental,,4.5,40,foodpanda_lahore,restaurants_clean,,,False
+96,Luxury Lounge- DHA,DHA,Fast Food,,3.0,1,foodpanda_lahore,restaurants_clean,,,False
+97,Mommmy's Kitchen - DHA,DHA,Pakistani,,4.2,100,foodpanda_lahore,restaurants_clean,,,False
+98,Mashallah Alamgir Hotel - Dha Lhe,DHA,Pakistani,,3.1,91,foodpanda_lahore,restaurants_clean,,,False
+99,Ashiq Fresh Juice - DHA,DHA,Burgers,,2.2,22,foodpanda_lahore,restaurants_clean,,,False
+100,Red Chilli's - DHA,DHA,Fast Food,,2.8,6,foodpanda_lahore,restaurants_clean,,,False
+101,Awami Pulao - DHA,DHA,Pakistani,,3.0,5,foodpanda_lahore,restaurants_clean,,,False
+102,Asli Karachi Paratha Roll - DHA,DHA,Pakistani,,4.0,100,foodpanda_lahore,restaurants_clean,,,False
+103,English Tea House - DHA,DHA,Continental,,4.5,100,foodpanda_lahore,restaurants_clean,,,False
+104,Forks n Knives Pizza Kitchen - DHA Y Block,DHA,Pizza,,3.9,3000,foodpanda_lahore,restaurants_clean,,,False
+105,Sadiq Halwa Puri - DHA,DHA,Pakistani,,3.7,76,foodpanda_lahore,restaurants_clean,,,False
+106,Grato Jalaybi -DHA,DHA,Pakistani,,4.7,5,foodpanda_lahore,restaurants_clean,,,False
+107,Khalis 365 - DHA,DHA,Desserts,,4.1,100,foodpanda_lahore,restaurants_clean,,,False
+108,Amritsari Kashmiri Harissa - DHA,DHA,Pakistani,,2.1,5,foodpanda_lahore,restaurants_clean,,,False
+109,Dairy Culture - DHA,DHA,Pakistani,,3.7,4,foodpanda_lahore,restaurants_clean,,,False
+110,Thoughtful Kitchen - DHA Phase 2,DHA,Healthy Food,,2.8,21,foodpanda_lahore,restaurants_clean,,,False
+111,Munching Minion - DHA,DHA,Fast Food,,3.6,100,foodpanda_lahore,restaurants_clean,,,False
+112,Gloria Jeans - DHA T Block,DHA,Continental,,3.4,20,foodpanda_lahore,restaurants_clean,,,False
+113,Pizza Town - DHA,DHA,Fast Food,,3.9,100,foodpanda_lahore,restaurants_clean,,,False
+114,BLENDZ-DHA,DHA,Desserts,,4.3,100,foodpanda_lahore,restaurants_clean,,,False
+115,Sweet Affairs - DHA,DHA,Fast Food,,2.5,7,foodpanda_lahore,restaurants_clean,,,False
+116,Ghar Say Ghar Tak - DHA,DHA,Pakistani,,3.5,100,foodpanda_lahore,restaurants_clean,,,False
+117,Chinese Min - DHA,DHA,Chinese,,4.0,1000,foodpanda_lahore,restaurants_clean,,,False
+118,De Cafe & Restaurant - DHA,DHA,Fast Food,,1.0,1,foodpanda_lahore,restaurants_clean,,,False
+119,Juicy Chuck-Barki Road DHA phase 8,DHA,Pasta,,3.6,100,foodpanda_lahore,restaurants_clean,,,False
+120,Uncles Grill - DHA,DHA,BBQ,,4.0,100,foodpanda_lahore,restaurants_clean,,,False
+121,Pak Broast-DHA,DHA,Pakistani,,4.4,14,foodpanda_lahore,restaurants_clean,,,False
+122,Spice Bazaar - DHA,DHA,Pakistani,,3.8,100,foodpanda_lahore,restaurants_clean,,,False
+123,ZINGO-DHA PHASE 6,DHA,Burgers,,4.2,500,foodpanda_lahore,restaurants_clean,,,False
+124,Eto Burgers - DHA Phase 6,DHA,Fast Food,,4.4,500,foodpanda_lahore,restaurants_clean,,,False
+125,CVCL- DHA Raya,DHA,Fast Food,,1.5,34,foodpanda_lahore,restaurants_clean,,,False
+126,Forks n Knives Pizza Kitchen - DHA,DHA,Pizza,,3.5,100,foodpanda_lahore,restaurants_clean,,,False
+127,Al Rehman Tikka Shop,Lahore,BBQ & Grill,moderate,4.7,3301,foodpanda_menu_scrape,restaurants_from_menu,"Ghazi Road, Nadirabad, Lahore",https://www.foodpanda.pk/restaurant/n7jk/al-rehman-tikka-shop,True
+128,BBQ Master - Branch 1,Lahore,BBQ & Grill,budget,0.0,0,foodpanda_menu_scrape,restaurants_from_menu,"Arif Abad, Near Abid Majeed CNG Petrol Pump, Bedian Road Lahore",https://www.foodpanda.pk/restaurant/ywfp/bbq-master-branch-1-ywfp,True
+129,BBQ Master - Branch 2,Lahore,Add-ons & Condiments,budget,0.0,0,foodpanda_menu_scrape,restaurants_from_menu,"Opposite Shehbaz Shreef hospital Bedian Road, Lahore",https://www.foodpanda.pk/restaurant/zviy/bbq-master-branch-2-zviy,True
+130,Bamboo Union - DHA,DHA,Japanese,premium,4.8,4466,foodpanda_menu_scrape,restaurants_from_menu,"CCA, Phase 5C, Commercial Main Boulevard, DHA, Lahore",https://www.foodpanda.pk/restaurant/n4th/bamboo-union-dha-n4th,True
+131,Boomerang - Phase 4 DHA,DHA,Sides & Appetizers,moderate,4.9,3216,foodpanda_menu_scrape,restaurants_from_menu,"9-CC St 8, Sector CC Dha Phase 4.",https://www.foodpanda.pk/restaurant/dtbd/boomerang-phase-4-dha,True
+132,CHOP & GRILL,DHA,Chinese,premium,4.4,732,foodpanda_menu_scrape,restaurants_from_menu,"Eden City ayaan Center , DHA Phase 8 Lahore, Punjab 54000, 54000 Punjab, Pakistan",https://www.foodpanda.pk/restaurant/t3dz/chop-and-grill-t3dz,True
+133,Crumble - DHA,DHA,Desserts,moderate,5.0,3359,foodpanda_menu_scrape,restaurants_from_menu,Plaza 335. Block Z. Phase 3. DHA Lahore,https://www.foodpanda.pk/restaurant/m5bp/crumble-dha,True
+134,Daily Deli CO -DHA,DHA,Beverages,moderate,4.8,13546,foodpanda_menu_scrape,restaurants_from_menu,"Plaza no. 227, Block FF, Phase 4, DHA, Lahore",https://www.foodpanda.pk/restaurant/xyox/daily-deli-co-dha,True
+135,Domino's Pizza - DHA H Block,DHA,Desserts,moderate,4.8,3408,foodpanda_menu_scrape,restaurants_from_menu,"Plot # 12 Sector G , DHA Phase 1 Commercial Market , DHA – Lahore",https://www.foodpanda.pk/restaurant/e6of/dominos-pizza-dha-h-block,True
+136,Double Shot - Lalik Chowk,DHA,Beverages,premium,4.9,378,foodpanda_menu_scrape,restaurants_from_menu,"Opposite Haly Tower, T Block DHA Phase 2.",https://www.foodpanda.pk/restaurant/dysg/double-shot-lalik-chowk,True
+137,Frute - Askari 11,Lahore,Beverages,premium,0.0,0,foodpanda_menu_scrape,restaurants_from_menu,"Arain St 1, Sector B Askari 11 Sector B",https://www.foodpanda.pk/restaurant/ur4x/frute-askari-11,True
+138,Hardee's - Lalik Chowk,DHA,Burgers,moderate,4.5,12587,foodpanda_menu_scrape,restaurants_from_menu,"5 CC-A Commercial Area, Phase 2 DHA, Lahore",https://www.foodpanda.pk/restaurant/s2ez/hardees-lalik-chowk,True
+139,Jalal Sons - DHA Phase 5,DHA,Desserts,moderate,4.8,8754,foodpanda_menu_scrape,restaurants_from_menu,"9 CCA, Phase 5 DHA",https://www.foodpanda.pk/restaurant/s0og/jalal-sons-dha-phase-5,True
+140,KFC - DHA U Block,DHA,Deals & Combos,moderate,4.9,6020,foodpanda_menu_scrape,restaurants_from_menu,"242 Khayaban-e-Jinnah, Sector U DHA Phase 2, Lahore, Punjab, Pakistan",https://www.foodpanda.pk/restaurant/ijsb/kfc-dha-u-block,True
+141,KUNGFU PANDA THAI & CHINESE,Lahore,Meat Mains,moderate,4.7,15,foodpanda_menu_scrape,restaurants_from_menu,"685, Punjab Small Industries Cooperative Housing Society Phase 1 Cantt View Housing Scheme, Lahore, Pakistan",https://www.foodpanda.pk/restaurant/ozrt/kungfu-panda-thai-and-chinese,True
+142,Kababjees Fried Chicken - Dha Phase 5 Lahore,DHA,Deals & Combos,moderate,4.7,6959,foodpanda_menu_scrape,restaurants_from_menu,Plot #150 Khayaban-e-Jinnah Phase 5 Dha,https://www.foodpanda.pk/restaurant/lca8/kababjees-fried-chicken-dha-phase-5-lahore,True
+143,Kababjees Restaurant Lahore,Lahore,BBQ & Grill,premium,4.8,1572,foodpanda_menu_scrape,restaurants_from_menu,"Plot #3, Askari XI, Lahore, Punjab 54400",https://www.foodpanda.pk/restaurant/lqz4/kababjees-restaurant-lahore,True
+144,Karachi Hot N Spicy - DHA,DHA,BBQ & Grill,moderate,4.8,36829,foodpanda_menu_scrape,restaurants_from_menu,"74 H Commercial، Sector H Dha Phase 1, Lahore",https://www.foodpanda.pk/restaurant/s5gf/karachi-hot-n-spicy-dha,True
+145,Karachi Naseeb Biryani & Murgh Pulao - Chatri Chowk,Lahore,BBQ & Grill,budget,3.4,528,foodpanda_menu_scrape,restaurants_from_menu,"68 Chatri Chowk, Haji Muhammad Usman Road, Punjab Small Industry, D Block, Lahore",https://www.foodpanda.pk/restaurant/oxpr/karachi-naseeb-biryani-and-murgh-pulao-chatri-chowk,True
+146,Layers - DHA V,Lahore,Desserts,premium,5.0,6894,foodpanda_menu_scrape,restaurants_from_menu,"Amsons Distributers, Plaza 80،, Street 6, Sector C Phase 5 D.H.A",https://www.foodpanda.pk/restaurant/b2mb/layers-dha-v,True
+147,Mary Browns Phase 5,DHA,Other,moderate,4.8,1511,foodpanda_menu_scrape,restaurants_from_menu,136C C - DHa phase 5,https://www.foodpanda.pk/restaurant/fp17/mary-browns-phase-5,True
+148,McDonald's - Def Phase -5,DHA,Meat Mains,premium,4.4,20773,foodpanda_menu_scrape,restaurants_from_menu,McDonald’s 146 CC commercial building DHA phase 5 Lahore,https://www.foodpanda.pk/restaurant/u4qj/mcdonalds-def-phase-5,True
+149,Nou Lakha Bar B Q & Karahi,Lahore,BBQ & Grill,moderate,4.7,3154,foodpanda_menu_scrape,restaurants_from_menu,"St 1, A, Phase 1 Cantt View Housing Scheme",https://www.foodpanda.pk/restaurant/nhuz/nou-lakha-bar-b-q-and-karahi,True
+150,OPTP - Phase 5,DHA,Deals & Combos,moderate,4.7,1323,foodpanda_menu_scrape,restaurants_from_menu,"Plot no 254/4 sector g , phase 5 DHA Lahore",https://www.foodpanda.pk/restaurant/o0nv/optp-phase-5,True
+151,Papa Johns - Dha Phase 5,DHA,Beverages,moderate,4.6,3717,foodpanda_menu_scrape,restaurants_from_menu,"95-CCA, DHA Phase 5 Lahore",https://www.foodpanda.pk/restaurant/rl89/papa-johns-dha-phase-5,True
+152,Pizza Hut - DHA Phase 4,DHA,Pizza,moderate,4.9,510,foodpanda_menu_scrape,restaurants_from_menu,"F.F Market, DHA Phase 4 Lahore, 54000",https://www.foodpanda.pk/restaurant/mmpz/pizza-hut-dha-phase-4,True
+153,Qaffa,DHA,Beverages,moderate,0.0,0,foodpanda_menu_scrape,restaurants_from_menu,153/3 A DHA phase 8 Broadway LHR,https://www.foodpanda.pk/restaurant/gi25/qaffa-gi25,True
+154,Rax Pizza Shawarma & Burgers,DHA,Deals & Combos,moderate,4.6,9,foodpanda_menu_scrape,restaurants_from_menu,"Floor # 03. Haly Tower, Sector R DHA Phase 2, Lahore",https://www.foodpanda.pk/restaurant/s6a0/rax-pizza-shawarma-and-burgers-s6a0,True
+155,Rina's Kitchenette - Dolmen Mall,DHA,Beverages,premium,4.8,308,foodpanda_menu_scrape,restaurants_from_menu,"Dolmen Mall, Phase 6, DHA",https://www.foodpanda.pk/restaurant/yfwv/rinas-kitchenette-dolmen-mall,True
+156,Savour Foods - Askari XI,DHA,Rice & Biryani,moderate,4.9,5754,foodpanda_menu_scrape,restaurants_from_menu,"Panda Kitchen, Marvel Event Complex, Bedian Rd, Sector A DHA, Next to Butt Karahi Restaurant, Lahore.",https://www.foodpanda.pk/restaurant/frbp/savour-foods-askari-xi,True
+157,Shahenshah Sajji and Grill - DHA,DHA,Deals & Combos,moderate,4.7,999,foodpanda_menu_scrape,restaurants_from_menu,Rehman centre 2 M block phase 5 DHA service lane ring road Lahore.,https://www.foodpanda.pk/restaurant/vvql/shahenshah-sajji-and-grill-dha,True
+158,Shawarma Stop - DHA,DHA,Other,premium,4.8,1686,foodpanda_menu_scrape,restaurants_from_menu,Shawarma Stop - DHA,https://www.foodpanda.pk/restaurant/vjru/shawarma-stop-dha,True
+159,Simply Sufi XPRS-Penta Square,Lahore,Burgers,moderate,4.8,209,foodpanda_menu_scrape,restaurants_from_menu,"Pentasquare mall, Sector C Phase 5 D.H.A, Lahore, Punjab",https://www.foodpanda.pk/restaurant/phrw/simply-sufi-xprs-penta-square,True
+160,Sultan Shawarma - DHA,DHA,Other,moderate,4.8,4414,foodpanda_menu_scrape,restaurants_from_menu,"22-T, civic commercial area, phase 2, DHA, Lahore. Near lalik chowk",https://www.foodpanda.pk/restaurant/boxk/sultan-shawarma-dha,True
+161,Urwa's Kitchen,Lahore,Deals & Combos,moderate,4.8,6942,foodpanda_menu_scrape,restaurants_from_menu,"House #203, Pace Woodlands, Bedian Road, Lahore",https://www.foodpanda.pk/restaurant/ct07/urwas-kitchen,True
+162,Wafir - DHA,DHA,Add-ons & Condiments,moderate,4.7,2157,foodpanda_menu_scrape,restaurants_from_menu,"32, Sector Z DHA Phase 3, Lahore, Punjab",https://www.foodpanda.pk/restaurant/x9uk/wafir-dha,True
+163,XO Chinese Chips - DHA,DHA,Sides & Appetizers,premium,4.7,239,foodpanda_menu_scrape,restaurants_from_menu,", Sector T DHA Phase 2, Lahore, Pakistan",https://www.foodpanda.pk/restaurant/cdjy/xo-chinese-chips-dha,True
+164,Zero Degree - DHA,DHA,Desserts,moderate,4.8,1293,foodpanda_menu_scrape,restaurants_from_menu,"Shop no. 1, plot no. 158, Block H, phase 1, DHA.",https://www.foodpanda.pk/restaurant/irtz/zero-degree-dha,True
