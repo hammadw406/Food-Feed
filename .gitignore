@@ -9,3 +9,7 @@ infra/etl/data/clean/
 # Python venvs
 infra/venv/
 ml/venv/
+
+
+# ML model weights (large binary files — regenerate via compute_embeddings.py)
+ml/models/
