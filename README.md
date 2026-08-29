@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Personalized Food Discovery Platform
 
 > A food discovery feed that learns what you're craving from how you interact with it, and connects that to real restaurants you can order from or visit.
@@ -127,3 +128,6 @@ uvicorn main:app --reload
 ```
 
 See each module's own README (`frontend/README.md`, `backend/README.md`, `ml/README.md`, `infra/README.md`) for setup specific to that layer.
+=======
+# Food-Feed-
+>>>>>>> 4113680f73232d6f85bd1171915360957b4aa215
