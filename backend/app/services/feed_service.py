@@ -67,7 +67,7 @@ async def build_feed(
         pref_row = (
             await db.execute(
                 text("SELECT preference_vector FROM user_preferences WHERE user_id = :uid"),
-                {"uid": user_id},
+                {"uid": str(user_id)},
             )
         ).first()
         if pref_row is not None:
