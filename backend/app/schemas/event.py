@@ -1,18 +1,19 @@
 """
-Pydantic schemas for the /events endpoint.
+Pydantic schemas for the /events endpoint (logs to the `interactions` table).
 
-Shared contract with Person 3 (ML) — do not change field names without coordinating.
+Shared contract with Person 3 (ML) -- matches the schema already live in
+Supabase and used throughout the ml/ pipeline. Do not change field names
+without coordinating; build_training_features.py and train_ranking_model.py
+depend on these exact names.
 """
-
 from __future__ import annotations
 
-import uuid
 from datetime import datetime
-from typing import Any, Dict, Optional
+from typing import Optional
 
 from pydantic import BaseModel, Field
 
-from app.models.event import EventType
+from app.models.interaction import EventType
 
 
 class EventCreate(BaseModel):
@@ -20,37 +21,33 @@ class EventCreate(BaseModel):
     POST /events request body.
     The frontend sends this immediately after each user interaction.
     """
-    user_id: Optional[uuid.UUID] = Field(
+    user_id: Optional[str] = Field(
         default=None,
         description="Null for anonymous / pre-auth sessions.",
     )
-    item_id: uuid.UUID = Field(description="Restaurant or menu item UUID.")
+    candidate_id: str = Field(description="ID of the item shown (matches items.candidate_id).")
     event_type: EventType
-    dwell_time: Optional[float] = Field(
+    dwell_time_ms: Optional[int] = Field(
         default=None,
-        description="Seconds the user spent on this item. Only set for 'dwell' events.",
+        description="Milliseconds the user spent on this item.",
     )
-    # Client-side timestamp — more accurate than server receipt time.
-    timestamp: Optional[datetime] = Field(
+    session_id: Optional[str] = Field(
+        default=None,
+        description="Groups events into a single scroll session. Used by the ranking model's training pipeline.",
+    )
+    # Client-side timestamp -- more accurate than server receipt time.
+    created_at: Optional[datetime] = Field(
         default=None,
         description="UTC ISO-8601. Defaults to server time if not provided.",
-    )
-    context: Optional[Dict[str, Any]] = Field(
-        default=None,
-        description=(
-            "Flexible JSON payload. "
-            "Recommended keys: session_id (str), time_of_day (str), feed_position (int)."
-        ),
-        examples=[{"session_id": "abc123", "time_of_day": "lunch", "feed_position": 3}],
     )
 
 
 class EventResponse(BaseModel):
     """Response body after a successful event log."""
-    id: uuid.UUID
-    user_id: Optional[uuid.UUID]
-    item_id: uuid.UUID
+    interaction_id: int
+    user_id: Optional[str]
+    candidate_id: str
     event_type: EventType
-    timestamp: datetime
+    created_at: datetime
 
     model_config = {"from_attributes": True}

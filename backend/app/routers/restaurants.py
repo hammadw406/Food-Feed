@@ -6,8 +6,6 @@ Used by the restaurant detail screen (Person 1's frontend).
 
 from __future__ import annotations
 
-import uuid
-
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
@@ -30,13 +28,13 @@ router = APIRouter()
     ),
 )
 async def get_restaurant(
-    restaurant_id: uuid.UUID,
+    restaurant_id: int,
     db: AsyncSession = Depends(get_db),
 ) -> RestaurantDetail:
     stmt = (
         select(Restaurant)
-        .options(selectinload(Restaurant.menu_items))
-        .where(Restaurant.id == restaurant_id)
+        .options(selectinload(Restaurant.items))
+        .where(Restaurant.restaurant_id == restaurant_id)
     )
     result = await db.execute(stmt)
     restaurant = result.scalar_one_or_none()
