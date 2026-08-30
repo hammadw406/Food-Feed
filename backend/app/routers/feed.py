@@ -20,6 +20,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.database import get_db
 from app.schemas.feed import FeedResponse
 from app.services.feed_service import build_feed
+from app.core.auth import get_current_user_optional
 
 router = APIRouter()
 
@@ -42,5 +43,7 @@ async def get_feed(
     limit: int = Query(default=20, ge=1, le=50, description="Number of feed items to return."),
     offset: int = Query(default=0, ge=0, description="Pagination offset."),
     db: AsyncSession = Depends(get_db),
+    auth_user=Depends(get_current_user_optional),
 ) -> FeedResponse:
-    return await build_feed(db=db, user_id=user_id, limit=limit, offset=offset)
+    effective_user_id = uuid.UUID(auth_user.id) if auth_user else user_id
+    return await build_feed(db=db, user_id=effective_user_id, limit=limit, offset=offset)

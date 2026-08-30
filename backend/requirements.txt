@@ -23,3 +23,4 @@ python-dotenv>=1.0.1
 # Utilities
 python-multipart>=0.0.12   # for form data if needed
 lightgbm==4.7.0
+supabase==2.31.0 
