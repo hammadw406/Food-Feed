@@ -25,7 +25,9 @@ env/
 *.pkl
 *.joblib
 ml/models/*.txt
+!ml/models/ranking_model.txt
 ml/checkpoints/
+ml/models/all-MiniLM-L6-v2/
 
 # --- Data ---
 infra/data/raw/
@@ -43,4 +45,3 @@ Thumbs.db
 *.pem
 *.key
 secrets.json
-ml/models/all-MiniLM-L6-v2/ 
