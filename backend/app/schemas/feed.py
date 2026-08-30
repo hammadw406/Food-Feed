@@ -5,8 +5,10 @@ Feed shows dishes, not restaurant cards (see feed_service.py docstring).
 Tapping a dish opens that restaurant's full menu via a separate endpoint.
 """
 from __future__ import annotations
+
 import uuid
 from typing import List, Optional
+
 from pydantic import BaseModel, Field
 
 
@@ -20,14 +22,20 @@ class FeedRequest(BaseModel):
 class FeedItem(BaseModel):
     """A single dish card shown to the user in the feed."""
     candidate_id: str
+    restaurant_id: int
+    restaurant_name: str
     display_name: str
     category: Optional[str] = None
+    area: Optional[str] = None
     price: Optional[float] = None
     rating: Optional[float] = None
-    restaurant_id: Optional[int] = None
-    restaurant_name: Optional[str] = None
-    area: Optional[str] = None
+    image_url: Optional[str] = None
+    description: Optional[str] = None
+
+    # Score assigned by the ranking layer.
+    # 0.0–1.0 for ML-ranked items; None for cold-start random items.
     score: Optional[float] = None
+
     model_config = {"from_attributes": True}
 
 
