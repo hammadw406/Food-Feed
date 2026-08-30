@@ -1,21 +1,49 @@
-# Frontend — Feed UI
+# Frontend — Food Feed (Next.js)
 
-**Owner:** Person 1 · **Stack:** Next.js (React), Tailwind CSS, Zustand/React Context, Framer Motion, TanStack Query
-
-## Responsibilities
-- Scrollable/swipeable feed UI
-- Client-side interaction capture: dwell time, skip, like, tap
-- Wiring the feed to the backend API (`NEXT_PUBLIC_API_URL`)
-- Restaurant detail screen (menu, price, reviews)
-- Loading/empty states, diverse-feel first-session UX
-- Deployment to Vercel
+Desktop-first responsive web UI for the Food Feed discovery product.
+**Owner:** Person 1 · **Stack:** Next.js 14 (App Router, TS) · Tailwind CSS · TanStack Query
 
 ## Setup
+
 ```bash
 npm install
-cp ../.env.example .env.local   # fill in NEXT_PUBLIC_API_URL, etc.
-npm run dev
+cp .env.local.example .env.local   # set NEXT_PUBLIC_API_URL to the running FastAPI
+npm run dev                        # http://localhost:3000
 ```
 
-## Notes
-- Until the backend's real feed endpoint is ready, build against a mocked feed API so frontend and backend can work in parallel (see root README's execution plan, Phase 5).
+## Backend contract consumed
+
+The frontend talks to **only the four endpoints the backend actually exposes**:
+
+| Endpoint | Used by |
+|---|---|
+| `GET /feed?user_id&limit&offset` | Discovery feed, For-You status |
+| `POST /events` | Interaction tracking (`view` / `skip` / `like` / `tap` + `dwell_time_ms`) |
+| `GET /restaurants/{restaurant_id}` | Restaurant detail, Food detail context |
+| `GET /health` | (available; optional) |
+
+All network calls go through `src/lib/api/` — one client, no duplicate fetch logic.
+`src/lib/api/normalizeFeedItem.ts` tolerates both the declared and the actual
+`/feed` item shapes (the two disagree in the backend today).
+
+## Anonymous identity
+
+No login. `src/lib/session/identity.ts` mints a stable `user_id` + rolling
+`session_id` in `localStorage`; these are sent with every event.
+
+## What is NOT wired (no backend for it)
+
+Sign In / Sign Up, Community, Create Post, cuisine-affinity percentages, bank
+offers, food media, match scores and distance have **no backend**. Those screens
+are built and clearly labelled as previews — no mock data, no fake success.
+See the in-app notices and the implementation report.
+
+## Routes
+
+`/` landing · `/login` `/signup` (static) · `/onboarding` · `/discover` ·
+`/foods/[id]` · `/restaurants/[id]` · `/community` `/community/new` (preview) ·
+`/for-you` · `/profile`
+
+## Scripts
+
+`npm run dev` · `npm run build` · `npm run lint` · `npm start`
