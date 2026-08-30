@@ -10,6 +10,23 @@ infra/etl/data/clean/
 infra/venv/
 ml/venv/
 
+# --- ML artifacts ---
+*.pt
+*.pkl
+*.joblib
+ml/checkpoints/
 
 # ML model weights (large binary files — regenerate via compute_embeddings.py)
 ml/models/
+!ml/models/ranking_model.txt
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Secrets ---
+*.pem
+*.key
+secrets.json
