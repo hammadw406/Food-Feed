@@ -36,7 +36,7 @@ function safeSet(key: string, value: string): void {
 export function getUserId(): string {
   let id = safeGet(USER_KEY);
   if (!id) {
-    id = uid("web_user");
+    id = typeof crypto !== "undefined" && "randomUUID" in crypto ? crypto.randomUUID() : uid("web_user");
     safeSet(USER_KEY, id);
   }
   return id;
