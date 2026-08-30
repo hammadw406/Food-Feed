@@ -30,6 +30,9 @@ from __future__ import annotations
 import random
 from typing import List, Optional
 
+from pathlib import Path
+
+import lightgbm as lgb
 from sqlalchemy import func, select, text
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -40,6 +43,117 @@ from app.services.cache_service import cache_get, cache_set
 
 _CACHE_NS = "feed"
 PER_RESTAURANT_CAP = 2
+
+_RANKING_MODEL_PATH = Path(__file__).resolve().parents[3] / "ml" / "models" / "ranking_model.txt"
+_ranking_model: Optional[lgb.Booster] = None
+
+
+def _get_ranking_model() -> lgb.Booster:
+    """Load the LightGBM ranking model once and cache it in memory."""
+    global _ranking_model
+    if _ranking_model is None:
+        _ranking_model = lgb.Booster(model_file=str(_RANKING_MODEL_PATH))
+    return _ranking_model
+
+
+def _vector_literal(vector) -> str:
+    """
+    Format a preference vector as a pgvector literal string, e.g. "[0.1,0.2,...]",
+    for use with CAST(:pref AS vector). Works whether preference_vector comes
+    back from asyncpg as a python list/ndarray or already as a string.
+    """
+    if isinstance(vector, str):
+        return vector
+    return "[" + ",".join(str(float(v)) for v in vector) + "]"
+
+
+_CANDIDATE_QUERY = text("""
+    SELECT
+        i.candidate_id,
+        i.display_name,
+        i.category,
+        i.price,
+        i.rating,
+        i.restaurant_id,
+        i.restaurant_name,
+        i.area,
+        i.cluster_id,
+        r.review_count,
+        i.embedding <=> CAST(:pref AS vector) AS distance
+    FROM items i
+    JOIN restaurants r ON r.restaurant_id = i.restaurant_id
+    WHERE i.embedding IS NOT NULL
+    ORDER BY distance
+    LIMIT 50
+""")
+
+
+async def _personalized_candidates(
+    db: AsyncSession,
+    preference_vector,
+    limit: int,
+    offset: int,
+) -> List[FeedItem]:
+    """
+    pgvector ANN candidate generation (top 50 nearest to the user's
+    preference vector) + LightGBM reranking. Feature order/names are
+    read directly from ml/models/ranking_model.txt's feature_names line:
+    pref_similarity, rating, price, cluster_id, review_count.
+    """
+    rows = (
+        await db.execute(_CANDIDATE_QUERY, {"pref": _vector_literal(preference_vector)})
+    ).all()
+    if not rows:
+        return []
+
+    model = _get_ranking_model()
+
+    features = []
+    for row in rows:
+        (
+            candidate_id, display_name, category, price, rating,
+            restaurant_id, restaurant_name, area, cluster_id,
+            review_count, distance,
+        ) = row
+        pref_similarity = 1.0 - float(distance) if distance is not None else 0.0
+        features.append([
+            pref_similarity,
+            float(rating) if rating is not None else 0.0,
+            float(price) if price is not None else 0.0,
+            float(cluster_id) if cluster_id is not None else -1.0,
+            float(review_count) if review_count is not None else 0.0,
+        ])
+
+    scores = model.predict(features)
+
+    scored_rows = list(zip(rows, scores))
+    scored_rows.sort(key=lambda pair: pair[1], reverse=True)
+
+    restaurant_counts: dict[int, int] = {}
+    picked: List[tuple] = []
+    for row, score in scored_rows:
+        restaurant_id = row[5]
+        if restaurant_counts.get(restaurant_id, 0) >= PER_RESTAURANT_CAP:
+            continue
+        picked.append((row, score))
+        restaurant_counts[restaurant_id] = restaurant_counts.get(restaurant_id, 0) + 1
+
+    page = picked[offset: offset + limit]
+
+    return [
+        FeedItem(
+            candidate_id=row[0],
+            display_name=row[1],
+            category=row[2],
+            price=float(row[3]) if row[3] is not None else None,
+            rating=float(row[4]) if row[4] is not None else None,
+            restaurant_id=row[5],
+            restaurant_name=row[6],
+            area=row[7],
+            score=float(score),
+        )
+        for row, score in page
+    ]
 
 
 async def build_feed(
@@ -67,43 +181,40 @@ async def build_feed(
         pref_row = (
             await db.execute(
                 text("SELECT preference_vector FROM user_preferences WHERE user_id = :uid"),
-                {"uid": user_id},
+                {"uid": str(user_id)},
             )
         ).first()
         if pref_row is not None:
             preference_vector = pref_row[0]
             is_cold_start = False
 
+    feed_items: List[FeedItem]
     if not is_cold_start:
-        # TODO(ml -- Person 3): replace with a real pgvector ANN query + the
-        # trained LightGBM model, e.g.:
-        #   1. SELECT candidate_id, embedding <=> :preference_vector AS distance
-        #      FROM items ORDER BY distance LIMIT 50  -- candidate generation
-        #   2. score candidates with ml/models/ranking_model.txt (feature set:
-        #      pref_similarity, rating, price, cluster_id, review_count)
-        #   3. return the top `limit` after offset, sorted by predicted score
-        # Falling back to cold-start sampling until this is wired in.
-        is_cold_start = True
+        feed_items = await _personalized_candidates(
+            db, preference_vector, limit=limit, offset=offset
+        )
+        if not feed_items:
+            is_cold_start = True
 
-    items: List[Item] = await _cluster_diverse_sample(db, limit=limit, offset=offset)
+    if is_cold_start:
+        items = await _cluster_diverse_sample(db, limit=limit, offset=offset)
+        feed_items = [
+            FeedItem(
+                candidate_id=i.candidate_id,
+                display_name=i.display_name,
+                category=i.category,
+                price=float(i.price) if i.price is not None else None,
+                rating=float(i.rating) if i.rating is not None else None,
+                restaurant_id=i.restaurant_id,
+                restaurant_name=i.restaurant_name,
+                area=i.area,
+                score=None,
+            )
+            for i in items
+        ]
 
     count_stmt = select(func.count()).select_from(Item)
     total: int = (await db.execute(count_stmt)).scalar_one()
-
-    feed_items = [
-        FeedItem(
-            candidate_id=i.candidate_id,
-            display_name=i.display_name,
-            category=i.category,
-            price=float(i.price) if i.price is not None else None,
-            rating=float(i.rating) if i.rating is not None else None,
-            restaurant_id=i.restaurant_id,
-            restaurant_name=i.restaurant_name,
-            area=i.area,
-            score=None,  # populated once the ranking model is wired in
-        )
-        for i in items
-    ]
 
     response = FeedResponse(
         user_id=user_id,
