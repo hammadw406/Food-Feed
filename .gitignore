@@ -43,3 +43,4 @@ Thumbs.db
 *.pem
 *.key
 secrets.json
+ml/models/all-MiniLM-L6-v2/ 
