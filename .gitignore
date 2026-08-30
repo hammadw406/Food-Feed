@@ -30,3 +30,32 @@ Thumbs.db
 *.pem
 *.key
 secrets.json
+# --- Environment & Local Config ---
+frontend/.env.local
+
+# --- Node.js & Frontend (Next.js) ---
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+out/
+build/
+dist/
+.vercel
+*.log
+
+# --- Python & FastAPI Caches ---
+__pycache__/
+*.py[cod]
+*.class
+.pytest_cache/
+.coverage
+venv/
+.venv/
+backend/venv/
+backend/.venv/
+
+# --- Database & Local Storage ---
+*.sqlite
+*.sqlite3
+*.db
